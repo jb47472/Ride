@@ -1,0 +1,9 @@
+ul {
+    background: black;
+    height: 50px;
+}
+
+li {
+    border-left-color: blue;
+    border-style: solid;
+}
