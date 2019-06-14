@@ -1,5 +1,7 @@
 body{
-    background: purple;
+    background: teal;
     background-image: url("./images/car1.png");
+    height: 100%;
+    background-size: cover;
 }
 

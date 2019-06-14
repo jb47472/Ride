@@ -11,7 +11,10 @@ function App() {
   return (
     <Router>
       <div>
-        <NavTabs />
+        <div id="nav">
+          <NavTabs />
+        </div>
+
         <Wrapper>
           <Route exact path="/home" component={Home} />
           <Route exact path="/search" component={Search} />
