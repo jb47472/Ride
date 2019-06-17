@@ -1,0 +1,12 @@
+#home {
+    text-align: center;
+    background: white;
+    width: 500px;
+    height: 200px;
+    position: relative;
+    left: 500px;
+    top: 250px;
+    font-family: 'Noto Serif', serif;
+    background: bisque;
+    padding: 10px 0 0 0;
+}
