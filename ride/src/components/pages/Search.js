@@ -32,20 +32,20 @@ class Cars extends Component {
                             <Input
                                 value={this.state.Cars}
                                 onChange={this.handleInputChange}
-                                name="Cars"
-                                placeholder="Car (required)"
+                                name="make"
+                                placeholder="Make (required)"
                             />
                             <Input
                                 value={this.state.Make}
                                 onChange={this.handleInputChange}
-                                name="make"
-                                placeholder="make (required)"
+                                name="model"
+                                placeholder="Model (required)"
                             />
                             <TextArea
                                 value={this.state.Model}
                                 onChange={this.handleInputChange}
-                                name="model"
-                                placeholder="model (Optional)"
+                                name="year"
+                                placeholder="Year (Optional)"
                             />
                             <FormBtn
                                 disabled={!(this.state.Car && this.state.Make)}

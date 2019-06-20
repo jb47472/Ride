@@ -8,7 +8,7 @@ function Home() {
             <p>
                 Welcome to BuyRide
             </p>
-            <p>Click to Search for a new used vehicle</p>
+            <p>Find a new used car of your choice! Click to Search for a new used vehicle</p>
         </div>
     );
 }
