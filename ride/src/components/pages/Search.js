@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import Jumbotron from "../Jumbotron";
-import DeleteBtn from "../DeleteBtn";
 import { Col, Row, Container } from "../Grid";
-import { List, ListItem } from "../List";
 import { Input, TextArea, FormBtn } from "../Form";
 
 class Cars extends Component {
@@ -24,7 +22,7 @@ class Cars extends Component {
         return (
             <Container fluid>
                 <Row>
-                    <Col size="md-6">
+                    <Col size="md-12">
                         <Jumbotron>
                             <h1>What car would you like?</h1>
                         </Jumbotron>
@@ -52,32 +50,10 @@ class Cars extends Component {
                                 onClick={this.handleFormSubmit}
                             >
                                 Submit car
-                </FormBtn>
+                            </FormBtn>
                         </form>
                     </Col>
-                    <Col size="md-6 sm-12">
-                        <Jumbotron>
-                            <h1>On My List</h1>
-                        </Jumbotron>
-                        {this.state.Car.length ? (
-                            <List>
-                                {this.state.Car.map(Car => {
-                                    return (
-                                        <ListItem key={Cars._id}>
-                                            <a href={"/car/" + Cars._id}>
-                                                <strong>
-                                                    {Car.Make} by {Car.Model}
-                                                </strong>
-                                            </a>
-                                            <DeleteBtn onClick={() => this.deleteCars(Cars._id)} />
-                                        </ListItem>
-                                    );
-                                })}
-                            </List>
-                        ) : (
-                                <h3>no results</h3>
-                            )}
-                    </Col>
+
                 </Row>
             </Container>
         );

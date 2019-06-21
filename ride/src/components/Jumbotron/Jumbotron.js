@@ -9,7 +9,10 @@ function Jumbotron({ children }) {
         borderRadius: 10,
         borderStyle: "groove",
         borderWidth: 7,
-        borderColor: "coral"
+        borderColor: "coral",
+        width: 750,
+        position: "relative",
+        positionRight: 200
       }}
       className="jumbotron"
     >
