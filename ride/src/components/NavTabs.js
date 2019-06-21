@@ -5,6 +5,7 @@ import "./NavTabs.css";
 function NavTabs() {
     return (
         <ul className="nav nav-tabs">
+            <div id="title">MyRide</div>
             <li className="nav-item">
                 <Link to="/home" className={window.location.pathname === "/home" ? "nav-link active" : "nav-link"}>
                     Home
@@ -15,13 +16,6 @@ function NavTabs() {
                     to="/search"
                     className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}>
                     Search
-                </Link>
-            </li>
-            <li className="nav-item">
-                <Link
-                    to="/options"
-                    className={window.location.pathname === "/options" ? "nav-link active" : "nav-link"}>
-                    Options
                 </Link>
             </li>
             <li className="nav-item">
