@@ -14,8 +14,9 @@ function App() {
         <div id="nav">
           <NavTabs />
         </div>
-
+        <br></br>
         <Wrapper>
+          <Route exact path="/" component={Home} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/search" component={Search} />
           <Route exact path="/result" component={Result} />

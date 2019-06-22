@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import FieldInput from "../../Form/Login";
 
 function Home() {
     return (
@@ -9,6 +10,7 @@ function Home() {
                 Welcome to BuyRide
             </p>
             <p>Find a new used car of your choice! Click to Search for a new used vehicle</p>
+            <FieldInput />
         </div>
     );
 }
