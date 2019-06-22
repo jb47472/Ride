@@ -52,7 +52,7 @@ class Cars extends Component {
                                 disabled={!(this.state.Car && this.state.Make)}
                                 onClick={this.handleFormSubmit}
                             >
-                                Submit car
+                                Submit
                             </FormBtn>
                         </form>
                     </Col>

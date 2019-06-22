@@ -73,7 +73,15 @@ class FieldInput extends Component {
                         type="password"
                         placeholder="Password"
                     />
-                    <button onClick={this.handleFormSubmit}>Submit</button>
+                    <button style={{
+                        background: "#28a745",
+                        height: 40,
+                        width: 80,
+                        opacity: 0.75,
+                        borderRadius: 5,
+                        border: "none",
+                        color: "#fff"
+                    }} onClick={this.handleFormSubmit}>Submit</button>
                 </form>
             </div>
         );
