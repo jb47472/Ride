@@ -11,8 +11,7 @@ function Jumbotron({ children }) {
         borderWidth: 7,
         borderColor: "coral",
         width: 750,
-        position: "relative",
-        positionRight: 200
+        marginLeft: 350
       }}
       className="jumbotron"
     >

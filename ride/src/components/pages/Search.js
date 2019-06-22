@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Jumbotron from "../Jumbotron";
 import { Col, Row, Container } from "../Grid";
-import { Input, TextArea, FormBtn } from "../Form";
+import { Input, FormBtn } from "../Form";
 
 class Cars extends Component {
 
@@ -33,18 +33,21 @@ class Cars extends Component {
                                 name="make"
                                 placeholder="Make (required)"
                             />
+                            <br></br>
                             <Input
                                 value={this.state.Make}
                                 onChange={this.handleInputChange}
                                 name="model"
                                 placeholder="Model (required)"
                             />
-                            <TextArea
-                                value={this.state.Model}
+                            <br></br>
+                            <Input
+                                value={this.state.Make}
                                 onChange={this.handleInputChange}
-                                name="year"
-                                placeholder="Year (Optional)"
+                                name="model"
+                                placeholder="Model (required)"
                             />
+                            <br></br>
                             <FormBtn
                                 disabled={!(this.state.Car && this.state.Make)}
                                 onClick={this.handleFormSubmit}
