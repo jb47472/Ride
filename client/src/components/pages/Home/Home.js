@@ -9,7 +9,7 @@ function Home() {
             <p>
                 Welcome to BuyRide
             </p>
-            <p>Find a new used car of your choice! Login below to search for a new used vehicle</p>
+            <p style={{ paddingLeft: 10, paddingRight: 10 }}>Find a new used car of your choice! Login below to search for a new used vehicle</p>
             <br></br>
             <FieldInput />
         </div>
