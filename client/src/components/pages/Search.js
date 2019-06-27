@@ -49,7 +49,7 @@ class Cars extends Component {
                             />
                             <br></br>
                             <FormBtn
-                                disabled={!(this.state.Car && this.state.Make)}
+                                enabled={!(this.state.Car && this.state.Make)}
                                 onClick={this.handleFormSubmit}
                             >
                                 Submit

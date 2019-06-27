@@ -1,30 +1,27 @@
-const express = require("express");
-const logger = require("morgan");
-const mongoose = require("mongoose");
+require("dotenv").config();
+var express = require("express");
+var axios = require("axios");
+var cheerio = require("cheerio");
 
-const app = express();
-const PORT = process.env.PORT || 3001;
+var db = require("./models");
 
-const db = require("./models");
+var app = express();
+var PORT = process.env.PORT || 3001;
 
+// Middleware
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 app.use(express.static("public"));
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
 
-app.use(logger("dev"));
 
-const routes = require("./controllers/index");
-app.use(routes);
+var syncOptions = { force: false };
 
-const cheerio = require("cheerio");
-const axios = require("axios");
-
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static("client/build"));
+// If running a test, set syncOptions.force to true
+// clearing the `te
+if (process.env.NODE_ENV === "test") {
+    syncOptions.force = true;
 }
-
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
 
 app.get("/scrape", function (req, res) {
     axios.get("https://www.autotrader.com/cars-for-sale/Used+Cars/Charlotte+NC-28202?listingTypes=USED&searchRadius=50&zip=28202&startYear=1981&endYear=2020&marketExtension=true&sortBy=relevance&numRecords=100&firstRecord=1")
@@ -50,10 +47,34 @@ app.get("/scrape", function (req, res) {
             });
             res.send("scraped!")
             console.log(results);
+
+            var orm = {
+                update: function (tableInput, condition, cb) {
+                    connection.query('UPDATE ' + tableInput + ' SET devoured=true WHERE id =' + condition +
+                        ';', function (err, result) {
+                            if (err) throw err;
+                            cb(result);///calling back my result
+                        })
+                },
+            }
         });
+
 });
 
-
-app.listen(PORT, function () {
-    console.log("Server listening on: http://localhost:" + PORT);
+// Starting the server, syncing our models ------------------------------------/
+db.sequelize.sync(syncOptions).then(function () {
+    app.listen(PORT, function () {
+        console.log(
+            "==> :earth_americas:  Listening on port %s. Visit http://localhost:%s/ in your browser.",
+            PORT,
+            PORT
+        );
+    });
 });
+
+module.exports = app;
+
+
+
+
+
