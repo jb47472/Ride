@@ -33,7 +33,9 @@ class Cars extends Component {
                                 name="make"
                                 placeholder="Make (required)"
                             />
+
                             <br></br>
+
                             <Input
                                 value={this.state.Make}
                                 onChange={this.handleInputChange}
