@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Ride/static/css/main.eea4a28f.chunk.css",
+    "main.js": "/Ride/static/js/main.ff6a2498.chunk.js",
+    "main.js.map": "/Ride/static/js/main.ff6a2498.chunk.js.map",
+    "runtime~main.js": "/Ride/static/js/runtime~main.0b3f8814.js",
+    "runtime~main.js.map": "/Ride/static/js/runtime~main.0b3f8814.js.map",
+    "static/js/2.08815305.chunk.js": "/Ride/static/js/2.08815305.chunk.js",
+    "static/js/2.08815305.chunk.js.map": "/Ride/static/js/2.08815305.chunk.js.map",
+    "index.html": "/Ride/index.html",
+    "precache-manifest.8c52f582f4df9d17ac2b8cf89d66d2ad.js": "/Ride/precache-manifest.8c52f582f4df9d17ac2b8cf89d66d2ad.js",
+    "service-worker.js": "/Ride/service-worker.js",
+    "static/css/main.eea4a28f.chunk.css.map": "/Ride/static/css/main.eea4a28f.chunk.css.map",
+    "static/media/style.css": "/Ride/static/media/car2.ac23c038.png"
+  }
+}
