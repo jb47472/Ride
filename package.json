@@ -39,6 +39,5 @@
     "nodemon": "^1.19.1",
     "sequelize": "^5.8.12",
     "start": "^5.1.0"
-  },
-  "homepage": "https://jb47472.github.io/Ride/"
+  }
 }
