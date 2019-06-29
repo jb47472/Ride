@@ -2,6 +2,7 @@ require("dotenv").config();
 var express = require("express");
 var axios = require("axios");
 var cheerio = require("cheerio");
+var path = require('path');
 
 var db = require("./models");
 
@@ -11,7 +12,7 @@ var PORT = process.env.PORT || 3001;
 // Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "client/build")));
 
 
 
@@ -59,6 +60,10 @@ app.get("/scrape", function (req, res) {
             }
         });
 
+});
+
+app.get("/", function (req, res) {
+    res.sendFile(__dirname + '/client/build/index.html');
 });
 
 // Starting the server, syncing our models ------------------------------------/
